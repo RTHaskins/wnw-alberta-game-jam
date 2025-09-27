@@ -1197,3 +1197,6 @@
 /wnw-AlbertaGameJam-onomatopoeia/Library/ScriptAssemblies/UnityEngine.UI.dll filter=lfs diff=lfs merge=lfs -text
 /wnw-AlbertaGameJam-onomatopoeia/Library/SourceAssetDB filter=lfs diff=lfs merge=lfs -text
 /wnw-AlbertaGameJam-onomatopoeia/Library/Style.catalog filter=lfs diff=lfs merge=lfs -text
+*.unity filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
