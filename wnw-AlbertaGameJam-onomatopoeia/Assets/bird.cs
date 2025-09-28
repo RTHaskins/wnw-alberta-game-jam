@@ -9,7 +9,7 @@ public class bird : MonoBehaviour
     public GameObject target;
     private float currentAngle;
     private float radius;
-    private float speed = 100f;
+    private float speed = 150f;
     private SpriteRenderer sprite;
 
     void Start()
