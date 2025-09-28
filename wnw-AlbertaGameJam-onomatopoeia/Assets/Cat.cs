@@ -1,6 +1,7 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.Rendering;
 
 
@@ -9,8 +10,11 @@ public class Cat : MonoBehaviour
 {
     [SerializeField]
     private GameObject bird;
-
+    [SerializeField]
+    public Text resultText;
+    [SerializeField]
     public float speed;
+
     float speedx, speedy;
     private Rigidbody2D rb;
 
@@ -43,12 +47,12 @@ public class Cat : MonoBehaviour
         //rb.linearVelocity = velocity;
         
 
-        if(leapAction.WasPressedThisFrame())
+        if(leapAction.WasPressedThisFrame() || resultText.text == "CHIRP")
         {
             var leapDirection = (bird.transform.position - transform.position).normalized;
             velocity = new Vector2(speed, speed) * leapDirection;
             rb.linearVelocity = velocity;
-
+            resultText.text += " ";
         }
 
         
